@@ -27,8 +27,8 @@ public class Piston extends SubsystemBase {
         m_piston = new DoubleSolenoid(moduleType, forwardChannel, reverseChannel);
     }
 
-    public Piston(int module, PneumaticsModuleType moduleType, int forwardChannel, int reverseChannel) {
-        m_piston = new DoubleSolenoid(module, moduleType, forwardChannel, reverseChannel);
+    public Piston(int moduleNumber, PneumaticsModuleType moduleType, int forwardChannel, int reverseChannel) {
+        m_piston = new DoubleSolenoid(moduleNumber, moduleType, forwardChannel, reverseChannel);
     }
 
     public void setForwards() {
