@@ -4,7 +4,7 @@
 
 package frc.robot.commands;
 
-import frc.robot.subsystem.Compressor;
+import frc.robot.subsystems.AirCompressor;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 /** An example command that uses an example subsystem. */

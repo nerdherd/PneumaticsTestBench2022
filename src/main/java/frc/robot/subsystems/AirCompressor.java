@@ -22,7 +22,7 @@ public class AirCompressor extends SubsystemBase {
         m_compressor = new Compressor(port, moduleType);
     }
 
-    public enableDigital() {
+    public void enableDigital() {
         m_compressor.enableDigital();
     }
 }

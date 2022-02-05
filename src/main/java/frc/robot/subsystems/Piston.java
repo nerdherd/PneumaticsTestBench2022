@@ -23,6 +23,10 @@ public class Piston extends SubsystemBase {
         m_piston = new DoubleSolenoid(null, port1, port2);
     }
 
+    public Piston(PneumaticsModuleType moduleType, int forwardChannel, int reverseChannel) {
+        m_piston = new DoubleSolenoid(moduleType, forwardChannel, reverseChannel);
+    }
+
     public Piston(int module, PneumaticsModuleType moduleType, int forwardChannel, int reverseChannel) {
         m_piston = new DoubleSolenoid(module, moduleType, forwardChannel, reverseChannel);
     }

@@ -10,8 +10,8 @@ package frc.robot;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.subsystems.AirCompressor;
 import frc.robot.subsystems.Piston;
-import frc.robot.subsystems.Piston.ExtendPiston;
-import frc.robot.subsystems.Piston.RetractPiston;
+import frc.robot.commands.ExtendPiston;
+import frc.robot.commands.RetractPiston;
 
 /**
  * Add your docs here.
