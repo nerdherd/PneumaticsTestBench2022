@@ -10,6 +10,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.ExtendPiston;
 import frc.robot.commands.RetractPiston;
+import frc.robot.commands.TogglePiston;
 
 /**
  * Add your docs here.
@@ -19,5 +20,6 @@ public class OI {
     public OI() {
         SmartDashboard.putData("extend piston", new ExtendPiston(Robot.piston));
         SmartDashboard.putData("retract piston", new RetractPiston(Robot.piston));
+        SmartDashboard.putData("toggle piston", new TogglePiston(Robot.piston));
     }
 }

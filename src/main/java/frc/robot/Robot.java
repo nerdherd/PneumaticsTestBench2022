@@ -37,7 +37,7 @@ public class Robot extends TimedRobot {
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
 
-    piston = new Piston(PneumaticsModuleType.CTREPCM, 0, 1);
+    piston = new Piston(PneumaticsModuleType.CTREPCM, 4, 0);
     compressor = new AirCompressor(0, PneumaticsModuleType.CTREPCM);
 
     compressor.enableDigital();
