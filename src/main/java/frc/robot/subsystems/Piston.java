@@ -9,6 +9,7 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
+import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 /**
@@ -20,6 +21,10 @@ public class Piston extends SubsystemBase {
 
     public Piston(int port1, int port2) {
         m_piston = new DoubleSolenoid(null, port1, port2);
+    }
+
+    public Piston(int module, PneumaticsModuleType moduleType, int forwardChannel, int reverseChannel) {
+        m_piston = new DoubleSolenoid(module, moduleType, forwardChannel, reverseChannel);
     }
 
     public void setForwards() {

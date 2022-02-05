@@ -24,7 +24,10 @@ public class Robot extends TimedRobot {
 
   private RobotContainer m_robotContainer;
 
-  private static Piston piston;
+  public static Piston piston;
+  public static AirCompressor compressor;
+
+  public static OI oi;
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -36,17 +39,24 @@ public class Robot extends TimedRobot {
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
 
-    Compressor pcmCompressor = new Compressor(0, PneumaticsModuleType.CTREPCM);
-    Compressor phCompressor = new Compressor(1, PneumaticsModuleType.REVPH);
+    piston = new Piston(PneumaticsModuleType.CTREPCM, 0, 1);
+    compressor = new AirCompressor(0, PneumaticsModuleType.CTREPCM);
 
-    pcmCompressor.enableDigital();
+    compressor.enableDigital();
+
+    oi = new OI();
+
+    // Compressor pcmCompressor = new Compressor();
+    // Compressor phCompressor = new Compressor(1, PneumaticsModuleType.REVPH);
+
+    // pcmCompressor.enableDigital();
     // pcmCompressor.disable();
 
-    DoubleSolenoid exampleDoublePCM = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 0, 1);
-    DoubleSolenoid exampleDoublePH = new DoubleSolenoid(9, PneumaticsModuleType.REVPH, 0, 1);
+    //DoubleSolenoid exampleDoublePCM = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 0, 1);
+    //DoubleSolenoid exampleDoublePH = new DoubleSolenoid(9, PneumaticsModuleType.REVPH, 0, 1);
 
     //exampleDoublePCM.set(kOff);
-    exampleDoublePCM.set(kForward);
+    //exampleDoublePCM.set(kForward);
     //exampleDoublePCM.set(kReverse);
 
     // boolean enabled = pcmCompressor.enabled();
